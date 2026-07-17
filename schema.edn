@@ -1,0 +1,5 @@
+{:schema/id :hibiki-presentation
+ :schema/format :structured-edn
+ :schema/resource "lex/presentation.edn"
+ :schema/required [:presentation/lexicon :presentation/id :presentation/defs]
+ :schema/note "The lexicon is a canonical EDN document; nested definitions are collections, not encoded strings."}

@@ -1,0 +1,41 @@
+{:actor/id "hibiki"
+ :actor/did "did:web:etzhayyim.com:actor:hibiki"
+ :actor/glyph "響"
+ :actor/display-name "響 — proposal to presentation medium"
+ :actor/tier :tier-b
+ :actor/kind :proposal-presentation-medium
+ :actor/status :r0
+ :actor/purpose
+ "Turns an ossekai proposal into a deterministic narrated moving-image presentation plan. Persuasive force is clarity and resonance, never compliance engineering. R0 is offline planning only; rendering and publishing remain outward-gated."
+ :actor/integrates ["ossekai" "utsushie" "kataribe"]
+ :actor/adr ["2606241600" "2606161536" "2605264000" "2605192100"
+             "2605231902" "2605215000" "2605231525"]
+ :actor/gates
+ [{:gate/id "H1" :gate/rule "Propose, never act or adjudicate; render and publish are carried by ossekai."}
+  {:gate/id "H2" :gate/rule "Narration is bounded to the proposal excerpt and proposed action."}
+  {:gate/id "H3" :gate/rule "Neutral synthetic narration; real-person likeness and voice cloning are unrepresentable."}
+  {:gate/id "H4" :gate/rule "No engagement optimization, fake urgency, or manipulative audio."}
+  {:gate/id "H5" :gate/rule "Rendering and TTS are Murakumo-only and R0-gated."}
+  {:gate/id "H6" :gate/rule "Publishing is member-signed through ossekai; no server-held key."}
+  {:gate/id "H7" :gate/rule "Aggregate audience is the default; targeted delivery is consent-bound."}
+  {:gate/id "H8" :gate/rule "Sober, non-eschatological presentation with allowlisted audio purposes."}]
+ :actor/repository-contracts
+ {:ossekai {:repository "https://github.com/etzhayyim/com-etzhayyim-ossekai"
+            :revision "728a13cf4a1c4698347ab647fdd7a7238407f9ad"
+            :roles #{:proposal-source :publication-carrier}}
+  :utsushie {:repository "https://github.com/etzhayyim/com-etzhayyim-utsushie"
+             :revision "eb1ae5c531df0e2f2aa561260a6c4cd69e67fb6d"
+             :roles #{:render-contract :anti-deepfake-pattern}}
+  :kataribe {:repository "https://github.com/etzhayyim/com-etzhayyim-kataribe"
+             :revision "02cef52f032bc1333334111dc69accdc1d9a81aa"
+             :roles #{:translation-contract}}}
+ :actor/resources
+ {:lexicon "lex/presentation.edn"
+  :schema "schema.edn"
+  :planner "src/hibiki/methods/present_plan.cljc"}
+ :actor/tests
+ {:runner "babashka"
+  :cmd "bb test"
+  :verification {:tests 15 :assertions 35 :failures 0 :errors 0}
+  :suites ["hibiki.methods.test-charter-gates"
+           "hibiki.methods.test-present-plan"]}}
