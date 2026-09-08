@@ -19,7 +19,7 @@
   consent/mute honored), never by hibiki (H1 = G1 PROPOSE-not-act).
 
   Pure stdlib (no deps)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def EXCERPT-MAX 280)                                        ; H2 = G4 fair-use bound
 (def ALLOWED-AUDIENCE #{"aggregate" "targeted"})            ; H7 aggregate-first (default = aggregate)
