@@ -32,7 +32,7 @@
  :actor/resources
  {:lexicon "lex/presentation.edn"
   :schema "schema.edn"
-  :planner "src/hibiki/methods/present_plan.cljc"}
+  :planner "src/hibiki/methods/present_plan.cljk"}
  :actor/tests
  {:runner "babashka"
   :cmd "bb test"
