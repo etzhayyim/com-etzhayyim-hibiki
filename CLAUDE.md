@@ -65,7 +65,7 @@ ossekai :proposal ──► hibiki.build-plan (R0, pure/offline)
 ## Run
 
 ```bash
-bb test   # 15 tests / 35 assertions green
+kbb -M:test   # 15 tests / 35 assertions green
 ```
 
 ## Non-goals
