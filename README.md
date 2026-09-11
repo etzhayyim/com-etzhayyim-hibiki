@@ -14,7 +14,7 @@ weaponize sound, or hide the exit. The **last storyboard scene is always the con
 ## Run
 
 ```bash
-bb test            # charter-gates + present-plan, all green
+kbb -M:test            # charter-gates + present-plan, all green
 ```
 
 ## Pipeline

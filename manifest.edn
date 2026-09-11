@@ -35,7 +35,7 @@
   :planner "src/hibiki/methods/present_plan.cljk"}
  :actor/tests
  {:runner "babashka"
-  :cmd "bb test"
+  :cmd "kbb -M:test"
   :verification {:tests 15 :assertions 35 :failures 0 :errors 0}
   :suites ["hibiki.methods.test-charter-gates"
            "hibiki.methods.test-present-plan"]}}
