@@ -1,7 +1,7 @@
 (ns hibiki.methods.test-present-plan
   "Tests for hibiki 響 present-plan — the 説得力 knife-edge is structurally pinned.
   Run: bb test"
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [hibiki.methods.present-plan :as p]))
 
 (def base
